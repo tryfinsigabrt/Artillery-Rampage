@@ -17,85 +17,67 @@
 [sub_resource type="Resource" id="Resource_q7eis"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("3_ktv0m")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_gbh1l"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("4_xkfx1")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_5b2mu"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("5_ud48d")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_i8nns"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("6_j1oc6")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_cegii"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("7_fnn6g")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_81l6b"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("8_b7hmb")
-min_run_count = 2
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_0s4pg"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("9_lafpu")
 min_run_count = 3
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_mhwr4"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("10_bia7p")
 min_run_count = 4
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_4hpul"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("11_t8ytb")
 min_run_count = 3
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_rxonu"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("12_7mikl")
 min_run_count = 3
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_wc43b"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("13_diwyn")
 min_run_count = 5
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [sub_resource type="Resource" id="Resource_t61l5"]
 script = ExtResource("2_pb4wx")
 weapon = ExtResource("10_bia7p")
 min_run_count = 4
-weight_by_run = Dictionary[int, float]({})
 metadata/_custom_type_script = "uid://ck01216jo3djh"
 
 [resource]

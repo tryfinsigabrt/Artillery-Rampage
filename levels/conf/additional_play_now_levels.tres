@@ -14,15 +14,12 @@
 [sub_resource type="Resource" id="Resource_njefd"]
 script = ExtResource("2_5u525")
 weapons = Array[PackedScene]([ExtResource("4_n05gv"), ExtResource("6_1k68s")])
-weapon_count = Vector2i(1, 1)
-artillery_ai_types = Array[PackedScene]([])
 metadata/_custom_type_script = "uid://dwd2f2a37y3g0"
 
 [sub_resource type="Resource" id="Resource_1jm8t"]
 script = ExtResource("2_5u525")
 weapons = Array[PackedScene]([ExtResource("4_n05gv"), ExtResource("6_1k68s"), ExtResource("7_41wi3")])
 weapon_count = Vector2i(2, 2)
-artillery_ai_types = Array[PackedScene]([])
 metadata/_custom_type_script = "uid://dwd2f2a37y3g0"
 
 [sub_resource type="Resource" id="Resource_8g4lb"]
@@ -35,28 +32,23 @@ ai_config_by_difficulty = Dictionary[int, ExtResource("2_5u525")]({
 0: SubResource("Resource_njefd"),
 2: SubResource("Resource_1jm8t")
 })
-force_player_goes_first = false
-absolute_max_ai = 0
 
 [sub_resource type="Resource" id="Resource_6s3ft"]
 script = ExtResource("2_5u525")
 weapons = Array[PackedScene]([ExtResource("4_n05gv"), ExtResource("6_1k68s"), ExtResource("7_41wi3")])
 weapon_count = Vector2i(1, 2)
-artillery_ai_types = Array[PackedScene]([])
 metadata/_custom_type_script = "uid://dwd2f2a37y3g0"
 
 [sub_resource type="Resource" id="Resource_numv4"]
 script = ExtResource("2_5u525")
 weapons = Array[PackedScene]([ExtResource("4_n05gv"), ExtResource("6_1k68s"), ExtResource("7_41wi3"), ExtResource("8_cjd15")])
 weapon_count = Vector2i(2, 3)
-artillery_ai_types = Array[PackedScene]([])
 metadata/_custom_type_script = "uid://dwd2f2a37y3g0"
 
 [sub_resource type="Resource" id="Resource_8ak2e"]
 script = ExtResource("2_5u525")
 weapons = Array[PackedScene]([ExtResource("4_n05gv"), ExtResource("6_1k68s"), ExtResource("7_41wi3"), ExtResource("8_cjd15"), ExtResource("9_u52n0"), ExtResource("10_n0noq")])
 weapon_count = Vector2i(2, 4)
-artillery_ai_types = Array[PackedScene]([])
 metadata/_custom_type_script = "uid://dwd2f2a37y3g0"
 
 [sub_resource type="Resource" id="Resource_yxy2j"]
@@ -70,8 +62,6 @@ ai_config_by_difficulty = Dictionary[int, ExtResource("2_5u525")]({
 1: SubResource("Resource_numv4"),
 2: SubResource("Resource_8ak2e")
 })
-force_player_goes_first = false
-absolute_max_ai = 0
 
 [resource]
 script = ExtResource("15_hum8p")

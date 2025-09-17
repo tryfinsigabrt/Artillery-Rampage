@@ -84,8 +84,10 @@ func _ready() -> void:
 
 	# Cannot do a deep copy of array to duplicate the resources as this type is not duplicated in a deep copy
 	# We need to duplicate as will be modifying the resource and map returns an Array not a generic array i.e. Array[ShopItemResource]
+	# We don't need to duplicate subresources as there are none - only potential future arrays and dictionaries which now require deep copying
 	# Skip any resources explicitly marked as disabled
-	var sorted_items: Array = item_resources.items.filter(func(r): return not r.disable).map(func(r): return r.duplicate())
+	
+	var sorted_items: Array = item_resources.items.filter(func(r): return not r.disable).map(func(r): return r.duplicate_deep(Resource.DEEP_DUPLICATE_NONE))
 	sorted_items.sort_custom((func(a,b)->bool: return a.unlock_cost < b.unlock_cost))
 
 	for item:ShopItemResource in sorted_items:
