@@ -53,7 +53,7 @@ fill_to = Vector2(1, 0.84188)
 
 [node name="LevelSpecialFactory" type="Node2D"]
 
-[node name="GameLevel" type="Node2D" parent="."]
+[node name="GameLevel" type="Node2D" parent="." groups=["GameLevel"]]
 script = ExtResource("1_7h6qy")
 level_name = &"Factory"
 
