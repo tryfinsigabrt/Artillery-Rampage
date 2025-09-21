@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmqcp1d4u1uey"]
+
+[ext_resource type="PackedScene" uid="uid://uaih1d1o2vd7" path="res://levels/game_level.tscn" id="1_atshy"]
+[ext_resource type="PackedScene" uid="uid://dmtjm8de7ep32" path="res://controller/ai/ai_tank.tscn" id="2_x4bs5"]
+[ext_resource type="PackedScene" uid="uid://6b6y8xulf247" path="res://controller/ai/behaviors/rando_ai_behavior.tscn" id="3_wb6hd"]
+[ext_resource type="PackedScene" uid="uid://dps6lqs28tqa1" path="res://controller/player/player.tscn" id="4_hv7q3"]
+
+[node name="TestWallEdgeBug" type="Node2D"]
+
+[node name="GameLevel" parent="." instance=ExtResource("1_atshy")]
+
+[node name="BackgroundExtended" parent="GameLevel/Background" index="0"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameLevel/Background" index="1"]
+layout_mode = 0
+offset_top = -1024.0
+offset_right = 3072.0
+mouse_filter = 1
+color = Color(0.19607843, 0.28627452, 0.4392157, 1)
+
+[node name="Polygon2D" parent="GameLevel/Terrain/TerrainChunk" index="2"]
+polygon = PackedVector2Array(-104, -8, 66, -4, 264.844, -4.41174, 609, -8, 937, -3, 945, 445, -103, 448)
+
+[node name="Walls" parent="GameLevel" index="6"]
+wall_mode = 4
+
+[node name="Wind" parent="GameLevel" index="8"]
+wind_max = 0
+
+[node name="DayWeather" parent="GameLevel" index="13"]
+randomize_starting_state = false
+
+[node name="Enemy1" parent="GameLevel" instance=ExtResource("2_x4bs5")]
+position = Vector2(1234, 419)
+
+[node name="Tank" parent="GameLevel/Enemy1" index="0"]
+color = Color(0.682353, 0.713726, 0.219608, 1)
+
+[node name="RandoAiBehavior" parent="GameLevel/Enemy1/StateMachine" index="0" instance=ExtResource("3_wb6hd")]
+
+[node name="Player" parent="GameLevel" instance=ExtResource("4_hv7q3")]
+position = Vector2(13, 423)
+
+[node name="WeaponLeadballShotgun" parent="GameLevel/Player/Weapons" index="2"]
+always_shoot_for_count = 5
+current_ammo = 999
+
+[node name="WeaponKilonuke" parent="GameLevel/Player/Weapons" index="5"]
+current_ammo = 100
+ammo_used_per_shot = 5
+
+[node name="WeaponMeganuke" parent="GameLevel/Player/Weapons" index="6"]
+always_shoot_for_count = 5
+current_ammo = 100
+
+[node name="WeaponMissile" parent="GameLevel/Player/Weapons" index="9"]
+always_shoot_for_count = 5
+current_ammo = 100
+
+[editable path="GameLevel"]
+[editable path="GameLevel/ScreenShakeCamera2D"]
+[editable path="GameLevel/Terrain"]
+[editable path="GameLevel/Terrain/TerrainChunk"]
+[editable path="GameLevel/Walls"]
+[editable path="GameLevel/Enemy1"]
+[editable path="GameLevel/Player"]
+[editable path="GameLevel/Player/Tank/AimDamageWobble/PlayerActivateWobble"]

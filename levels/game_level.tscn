@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://uaih1d1o2vd7"]
+[gd_scene load_steps=29 format=3 uid="uid://uaih1d1o2vd7"]
 
 [ext_resource type="Script" uid="uid://bfl71q3d57n8s" path="res://levels/game_level.gd" id="1_c8wet"]
 [ext_resource type="Script" uid="uid://ehj364xag1df" path="res://utils/game_timer.gd" id="1_x4c1e"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d3q2cfp8mqu2x" path="res://tank/artillery_spawner.tscn" id="7_f5i3m"]
 [ext_resource type="PackedScene" uid="uid://boa5a2v0w2ag0" path="res://terrain/floor.tscn" id="8_bp7d6"]
 [ext_resource type="PackedScene" uid="uid://bncglf44illq3" path="res://weapons/weapon_leadball.tscn" id="10_nmusx"]
+[ext_resource type="Texture2D" uid="uid://d4aulenjx17bp" path="res://terrain/sky-top-tile-mirror.png" id="11_876hk"]
 [ext_resource type="PackedScene" uid="uid://45gqgsjcmu2i" path="res://weapons/weapon_leadball_burst.tscn" id="11_gqklp"]
 [ext_resource type="PackedScene" uid="uid://dtl6c4qaxjdaj" path="res://weapons/weapon_kilonuke.tscn" id="12_xykdc"]
 [ext_resource type="PackedScene" uid="uid://bamvmc2k56pyk" path="res://effects/post_processing/post_processing.tscn" id="19_onnnh"]
@@ -74,7 +75,8 @@ visible = false
 [node name="Background" type="TextureRect" parent="."]
 z_index = -100
 material = SubResource("ShaderMaterial_chthv")
-offset_right = 2048.0
+offset_left = -896.0
+offset_right = 2176.0
 offset_bottom = 2048.0
 texture = ExtResource("5_8f76g")
 expand_mode = 1
@@ -82,6 +84,14 @@ stretch_mode = 1
 script = ExtResource("6_hs6sd")
 wind_scoll_scale = 2.0
 min_wind_scroll_speed = 2.0
+
+[node name="BackgroundExtended" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_top = -512.0
+offset_right = 3072.0
+texture = ExtResource("11_876hk")
+expand_mode = 1
+stretch_mode = 1
 
 [node name="Terrain" parent="." instance=ExtResource("3_nb1rg")]
 unique_name_in_owner = true
@@ -123,7 +133,7 @@ sun_light = NodePath("../TheSunLight")
 game_level = NodePath("..")
 
 [node name="TheSunLight" type="PointLight2D" parent="."]
-position = Vector2(640, -640)
+position = Vector2(648, -706)
 color = Color(0.9, 0.9, 0.9, 1)
 energy = 0.33
 range_item_cull_mask = 3

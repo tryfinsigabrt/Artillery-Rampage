@@ -40,3 +40,4 @@ mono_crash.*.json
 # Krita temp files
 *.kra~
 *.png~
+*.psd~
