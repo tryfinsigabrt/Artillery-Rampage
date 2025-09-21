@@ -9,16 +9,6 @@
 
 [node name="GameLevel" parent="." instance=ExtResource("1_atshy")]
 
-[node name="BackgroundExtended" parent="GameLevel/Background" index="0"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="GameLevel/Background" index="1"]
-layout_mode = 0
-offset_top = -1024.0
-offset_right = 3072.0
-mouse_filter = 1
-color = Color(0.19607843, 0.28627452, 0.4392157, 1)
-
 [node name="Polygon2D" parent="GameLevel/Terrain/TerrainChunk" index="2"]
 polygon = PackedVector2Array(-104, -8, 66, -4, 264.844, -4.41174, 609, -8, 937, -3, 945, 445, -103, 448)
 
