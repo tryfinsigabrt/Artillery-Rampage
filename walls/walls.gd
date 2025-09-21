@@ -65,11 +65,22 @@ func _ready() -> void:
 	max_extent = Vector2(bounds.position.x + bounds.size.x, bounds.size.y)
 
 func _physics_process(_delta: float) -> void:
+	# Workaround for lifetime complete event sometimes not firing and there being a previously freed instance in array
+	_erase_all_invalid(tracked_projectiles)
+	_erase_all_invalid(tracked_beams)
+	
 	for projectile in tracked_projectiles:
 		check_projectile_wall_interaction(projectile)
 	for beam in tracked_beams:
 		check_beam_wall_interaction(beam)
 
+func _erase_all_invalid(array) -> void:
+	for i in range(array.size() - 1, -1, -1):
+		var value = array[i]
+		if not is_instance_valid(value):
+			push_warning("%s: Erased invalid instance at index %d in array %s" % [name, i, array])
+			array.remove_at(i)
+		
 func _select_wall_type() -> WallType:
 	if wall_randomization_weights.is_empty():
 		return wall_mode
