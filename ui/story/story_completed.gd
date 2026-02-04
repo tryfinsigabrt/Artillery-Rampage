@@ -7,6 +7,8 @@ extends Control
 @onready var buttons_container:Container = %ButtonsContainer
 
 func _ready() -> void:
+	yes_button.call_deferred("grab_focus") ## Gamepad support
+	
 	_apply_tank_shader()
 
 	var story_level_state:StoryLevelState = get_tree().get_first_node_in_group(Groups.STORY_LEVEL_STATE) as StoryLevelState

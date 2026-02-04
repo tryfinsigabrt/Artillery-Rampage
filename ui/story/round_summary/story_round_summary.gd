@@ -42,6 +42,8 @@ static func _static_init():
 func _ready() -> void:
 	print_debug("StoryRoundSummary: _ready")
 	
+	next_button.call_deferred("grab_focus") ## Gamepad support
+	
 	var stats : RoundStatTracker.RoundData = RoundStatTracker.round_data
 	if not stats:
 		push_error("No RoundStatTracker.RoundData was recorded!")

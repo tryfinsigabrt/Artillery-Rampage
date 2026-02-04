@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfqpo363uk5q1"]
+[gd_scene load_steps=3 format=3 uid="uid://dfqpo363uk5q1"]
 
 [ext_resource type="Script" uid="uid://4u26wmoacngc" path="res://ui/story/shop/item_row_weapon_buy.gd" id="1_qgamc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3j6h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f3j6h"]
 outline_size = 1
@@ -31,12 +29,11 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 tooltip_text = "Check this box to purchase the weapon"
-theme_override_colors/font_disabled_color = Color(0.510357, 0.500445, 0.587891, 1)
 theme_override_colors/font_color = Color(0.959263, 0.841336, 0.380551, 1)
 theme_override_colors/font_focus_color = Color(0.959263, 0.841336, 0.380551, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.505, 0.45, 1)
+theme_override_colors/font_disabled_color = Color(0.510357, 0.500445, 0.587891, 1)
 theme_override_font_sizes/font_size = 19
-theme_override_styles/focus = SubResource("StyleBoxEmpty_f3j6h")
 text = "Buy"
 
 [node name="CurrentAmmoRow" type="HBoxContainer" parent="."]

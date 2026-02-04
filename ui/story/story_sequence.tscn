@@ -222,6 +222,8 @@ custom_minimum_size = Vector2(140, 60)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+focus_next = NodePath("../NextButton")
+focus_previous = NodePath("../NextButton")
 text = "Skip"
 
 [node name="Spacer" type="Control" parent="Container/HBoxContainer/MarginContainer/VBoxContainer"]
@@ -233,6 +235,8 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_vertical = 8
+focus_next = NodePath("../SkipButton")
+focus_previous = NodePath("../SkipButton")
 text = "Next"
 
 [node name="MouseHighlight" parent="." instance=ExtResource("5_iyary")]

@@ -209,6 +209,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="Apply" type="Button" parent="Options/MarginContainer/VBoxContainer/ConfirmButtons"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Apply"
 

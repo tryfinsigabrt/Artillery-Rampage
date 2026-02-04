@@ -123,7 +123,6 @@ stretch_mode = 1
 
 [node name="StoryTooltips" type="Control" parent="." node_paths=PackedStringArray("sequence")]
 unique_name_in_owner = true
-layout_mode = 2
 anchors_preset = 0
 offset_left = 664.0
 offset_top = 596.0

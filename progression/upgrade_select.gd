@@ -10,6 +10,8 @@ extends Control
 
 
 func _ready() -> void:
+	receive_upgrade_button.call_deferred("grab_focus") ## Gamepad support
+	
 	modulate = Color.BLACK
 	#current_upgrades_panel.modulate = Color.TRANSPARENT
 	current_upgrades_panel.hide()

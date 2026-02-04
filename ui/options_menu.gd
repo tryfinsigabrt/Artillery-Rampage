@@ -23,6 +23,7 @@ signal closed
 @onready var keybind_changing_label: Label = %KeybindChangingLabel
 @onready var keybind_changing_glyph: Label = %KeybindChangingGlyph
 
+@onready var apply_button: Button = %Apply
 
 var cached_music_volume: float
 var cached_sfx_volume: float
@@ -37,6 +38,12 @@ func _ready() -> void:
 	keybinds.hide()
 	keybind_changing.hide()
 	keybind_changing.visibility_changed.connect(_on_keybind_changing_visibility_changed)
+	
+	visibility_changed.connect(_on_visibility_changed)
+	
+func _on_visibility_changed() -> void:
+	if visible:
+		apply_button.call_deferred("grab_focus") ## Gamepad support
 	
 func _input(event: InputEvent) -> void:
 	# Keybind Change Window

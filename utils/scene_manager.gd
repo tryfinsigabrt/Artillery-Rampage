@@ -20,6 +20,14 @@ enum PlayMode {
 	LEVEL_SELECT
 }
 
+var is_running_on_steam_deck:bool:
+	get:
+		if OS.get_processor_name() == "AMD Custom APU 0405":
+			return true
+		else:
+			return false
+			
+
 class SceneKeys:
 	const MainMenu:StringName = &"MainMenu"
 	#const PauseMenu:StringName = &"PauseMenu"

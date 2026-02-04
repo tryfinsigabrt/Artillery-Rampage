@@ -13,6 +13,8 @@ extends Control
 # Shop item row scenes by ItemType (Currently only weapon)
 @export var weapon_row_scene:PackedScene = preload("res://ui/story/shop/shop_row_weapon.tscn")
 
+@onready var reset_button: Button = %Reset
+
 ## SFX
 @onready var sfx_buy_ammo: AudioStreamPlayer = %SFX_BuyAmmo
 @onready var sfx_buy_weapon: AudioStreamPlayer = %SFX_BuyWeapon
@@ -74,6 +76,8 @@ var pending_scrap_spend:int = 0
 var pending_personnel_spend:int = 0
 
 func _ready() -> void:
+	reset_button.call_deferred("grab_focus") ## Gamepad support
+	
 	var player_state:PlayerState =_initialize_player_state()
 
 	var existing_weapons:Dictionary[String, Weapon] = {}

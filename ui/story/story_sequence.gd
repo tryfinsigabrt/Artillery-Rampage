@@ -30,6 +30,7 @@ func _ready() -> void:
 	next_slide()
 	
 func next_slide() -> void:
+	next_button.grab_focus() ## Gamepad support
 	# Stop any playing audio players
 	for player in playing:
 		player.stop()

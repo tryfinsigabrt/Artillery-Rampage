@@ -143,9 +143,13 @@ theme_override_constants/margin_right = 48
 [node name="MainMenuButtons" type="VBoxContainer" parent="Controls/MainMenu/Columns/CenterColumn/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+focus_next = NodePath("PlayNow")
+focus_previous = NodePath("Quit")
+focus_mode = 2
 theme_override_constants/separation = 8
 
 [node name="PlayNow" type="Button" parent="Controls/MainMenu/Columns/CenterColumn/MarginContainer/MainMenuButtons"]
+unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Arcade mode"
 focus_next = NodePath("../ContinueStory")

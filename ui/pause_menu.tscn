@@ -65,6 +65,7 @@ offset_right = 138.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 
 [node name="Label" type="Label" parent="Panel/PauseMenu/VBoxContainer"]
 layout_mode = 2
@@ -73,9 +74,14 @@ text = "PAUSED"
 horizontal_alignment = 1
 
 [node name="Resume" type="Button" parent="Panel/PauseMenu/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../QuitToDesktop")
+focus_neighbor_bottom = NodePath("../Options")
+focus_next = NodePath("../Options")
+focus_previous = NodePath("../MainMenu")
 theme = ExtResource("1_smh4t")
 text = "RESUME"
 
@@ -83,6 +89,10 @@ text = "RESUME"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../NewGame")
+focus_next = NodePath("../MainMenu")
+focus_previous = NodePath("../Resume")
 theme = ExtResource("1_smh4t")
 text = "OPTIONS"
 
@@ -91,6 +101,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../MainMenu")
 theme = ExtResource("1_smh4t")
 text = "NEW GAME"
 
@@ -98,6 +110,8 @@ text = "NEW GAME"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../NewGame")
+focus_neighbor_bottom = NodePath("../QuitToDesktop")
 theme = ExtResource("1_smh4t")
 text = "MAIN MENU"
 
@@ -106,6 +120,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../MainMenu")
+focus_neighbor_bottom = NodePath("../Resume")
 theme = ExtResource("1_smh4t")
 text = "QUIT TO DESKTOP"
 

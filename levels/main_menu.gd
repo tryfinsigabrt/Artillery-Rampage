@@ -12,6 +12,7 @@ var credits_list_is_focused:bool = false
 @onready var main_menu: VBoxContainer = %MainMenu
 @onready var options_menu: Control = %Options
 @onready var level_select_menu: LevelSelect = %LevelSelect
+@onready var play_now: Button = %PlayNow
 @onready var exit_to_desktop_button: Button = %Quit
 
 @onready var soundtrack: AudioStreamPlayer = %Soundtrack
@@ -27,9 +28,12 @@ func _init() -> void:
 	modulate = Color.BLACK # For fade-in
 	
 func _ready() -> void:
+	main_menu.visibility_changed.connect(_on_main_menu_visibility_changed)
+	
 	SceneManager.print_scene_tree_current_scene()
 	main_menu.show()
 	level_select_menu.hide()
+	play_now.call_deferred("grab_focus") ## Gamepad support
 	
 	# Remove buttons that don't function on Web
 	if OS.get_name() == "Web":
@@ -148,3 +152,7 @@ func _on_continue_story_pressed() -> void:
 
 func _disable_buttons() -> void:
 	UIUtils.disable_all_buttons(buttons_container, 20.0)
+
+func _on_main_menu_visibility_changed() -> void:
+	if main_menu.visible:
+		play_now.grab_focus()

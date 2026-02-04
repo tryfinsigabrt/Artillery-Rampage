@@ -1,6 +1,10 @@
 extends Control
 
 @onready var buttons_container:Container = %DifficultySelectContainer
+@onready var normal_button: Button = %Normal
+
+func _ready() -> void:
+	normal_button.call_deferred("grab_focus") ## Gamepad support
 
 func _on_easy_pressed() -> void:
 	_start_story(Difficulty.DifficultyLevel.EASY)

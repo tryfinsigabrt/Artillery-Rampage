@@ -41,6 +41,7 @@ func _ready() -> void:
 		_parallax_layers.append(layer.global_position)
 		
 	Juice.fade_in(next_button, Juice.LONG)
+	next_button.call_deferred("grab_focus") ## Gamepad support
 		
 func _process(_delta: float) -> void:
 	for layer_id in parallax_layers.size():

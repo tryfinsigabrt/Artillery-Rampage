@@ -5,6 +5,7 @@ var paused = false;
 @onready var events_log: PauseMenuLogUI = %EventsLog
 @onready var options_menu: PanelContainer = %OptionsMenu
 @onready var pause_menu: Control = %PauseMenu
+@onready var resume_button: Button = %Resume
 @onready var exit_to_desktop_button: Button = %QuitToDesktop
 
 @onready var round_director: RoundDirector = %RoundDirector
@@ -91,6 +92,7 @@ func toggle_visibility():
 		#get_tree().paused = true
 		#GameEvents.game_paused.emit(true)
 		input_buffer_listening = true
+		resume_button.call_deferred("grab_focus") ## Gamepad support
 	else:
 		self.hide()
 		#get_tree().paused = false
@@ -119,6 +121,7 @@ func _on_options_menu_closed() -> void:
 	pause_menu.show()
 	options_menu.hide()
 	input_buffer_listening = true
+	resume_button.grab_focus() ## Gamepad support
 
 func _on_new_game_pressed() -> void:
 	# Start a new quick match
