@@ -53,6 +53,7 @@ file_logging/max_log_files=100
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -158,6 +159,7 @@ pause={
 [rendering]
 
 limits/time/time_rollover_secs=300.0
+rendering_device/driver.linux="vulkan"
 
 [shader_globals]
 
