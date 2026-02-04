@@ -38,6 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 2
 script = ExtResource("1_kt7ub")
 buff_color = Color(0.96, 0.8448, 0.384, 0.27451)
 
@@ -172,6 +173,8 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+focus_neighbor_right = NodePath("../Confirm")
+focus_next = NodePath("../Confirm")
 mouse_filter = 1
 text = "CANCEL"
 
@@ -181,6 +184,8 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+focus_neighbor_left = NodePath("../Cancel")
+focus_previous = NodePath("../Cancel")
 mouse_filter = 1
 text = "CONFIRM"
 

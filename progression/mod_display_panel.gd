@@ -34,6 +34,8 @@ var confirming:bool = false
 
 
 func _enter_tree() -> void:
+	focus_entered.connect(_on_focus_entered) ## Gamepad support
+	
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 
@@ -110,13 +112,19 @@ func toggle_buttons(to_confirm:bool = true) -> void:
 		confirm_label.show()
 		cancel.show()
 		confirm.show()
+		confirm.grab_focus()
 	else:
 		confirming = false
 		delete.show()
+		delete.grab_focus()
 		# Are you sure?
 		confirm_label.hide()
 		cancel.hide()
 		confirm.hide()
+		
+func _on_focus_entered() -> void:
+	_on_mouse_entered()
+	delete.grab_focus.call_deferred()
 
 func _on_mouse_entered() -> void:
 	hide_timer.stop()
